@@ -1,1 +1,6 @@
-14:27:45.706 [main] INFO  testCases.AccountRegistrationTest - Account Registration Success...
+23:04:09.831 [main] INFO  testCases.LoginDataDrivenTest - Clicked on Login 
+23:04:09.910 [main] INFO  testCases.LoginDataDrivenTest - Provided Email 
+23:04:09.970 [main] INFO  testCases.LoginDataDrivenTest - Provided Password 
+23:04:14.584 [main] INFO  testCases.LoginDataDrivenTest - Clicked on Login
+23:04:29.648 [main] ERROR testCases.LoginDataDrivenTest - Login Failed 
+23:04:29.648 [main] INFO  testCases.LoginDataDrivenTest -  Finished Data Driven Testing.... 

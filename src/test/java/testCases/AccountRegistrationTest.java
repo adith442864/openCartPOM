@@ -32,7 +32,7 @@ public class AccountRegistrationTest extends BaseTest {
 		 regPage.setEmail(randomString()+"@gmail.com");
 		 logger.info("Provided Email...");
 		 
-		 regPage.setTelephone("9999900000");
+		 regPage.setTelephone(randomNumber()+"12345");
 		 logger.info("Provided Telephone...");
 		 
 		 regPage.setPassword("test@123");
@@ -56,6 +56,7 @@ public class AccountRegistrationTest extends BaseTest {
 		 }
 		 else
 			 logger.info("Account Registration Failed...");
+		 	captureScreen(driver, "Verify_Registration_Test");
 			 //System.out.println("Test Failed...");
 		 	Assert.assertTrue(false);
 		}

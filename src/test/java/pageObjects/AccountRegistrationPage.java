@@ -54,8 +54,8 @@ WebDriver driver;
 		txtEmail.sendKeys(email);
 	}
 	
-	public void setTelephone(String telephone) {
-		txtTelephone.sendKeys(telephone);
+	public void setTelephone(String telePhone) {
+		txtTelephone.sendKeys(telePhone);
 	}
 	
 	public void setPassword(String password) {
