@@ -6,16 +6,12 @@
   </listeners>
   <test thread-count="5" name="Opencart Tests(failed)">
     <parameter name="browser" value="chrome"/>
-    <groups>
-      <run>
-        <include name="master"/>
-      </run>
-    </groups>
     <classes>
       <class name="testCases.AccountRegistrationTest">
         <methods>
           <include name="Verify_Registration_Test"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.AccountRegistrationTest -->
     </classes>

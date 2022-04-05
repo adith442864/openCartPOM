@@ -9,12 +9,13 @@ import testBase.BaseTest;
 
 public class LoginTest extends BaseTest {
 	
-	@Test(groups= {"sanity", "master"})
+	@Test(groups= {"sanity","master"})
 	public void login_test() {
 		
 		logger.info("Starting Login Test....");
 		try {
 			
+			driver.get(rb.getString("appURL"));
 			hp = new HomePage(driver);
 			
 			hp.clickMyAccount();

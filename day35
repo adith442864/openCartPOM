@@ -1,0 +1,104 @@
+Day-35
+----------
+1) Desing & Implementation
+2) Execution
+3) Maintanace - version control system
+
+Project -- Modules--- Test cases
+
+Repository - common place/server
+
+Advantages of version control system
+------------------------
+1) share
+2) versioning
+
+Build1 - 1 feature  - V1
+Build2 - 2 feature - V2
+Build 3 - 3 feature V3  --- 3 features
+
+
+Git - Local repository
+GitHub - Remote repository
+
+
+Download git link:https://github.com/git-for-windows/git/releases/download/v2.31.1.windows.1/Git-2.31.1-64-bit.exe
+How To Install Git on Windows (Video link): https://youtu.be/7p7QbLJiOQs
+
+
+Workspace/Working dierctory: C:\Users\admin\myworkspace2\opencart
+
+Git Work flow
+------------------------
+1) git init  --> Create an Empty git repository(Local repository)
+
+2) git config --global  user.name  "your name"
+   git config --global user.email  "your email"
+
+3) git status 		---> to know the status of the files
+
+4) git add -A 		--> add all the files into staging/indexing area 
+   git add filename --> add specific file into staging/indexing area
+   git add *.java 
+
+5) git commit -m "this is my first commit"
+
+
+GitHub
+-----------------
+1) Create new account (Sign up)
+2) Login---> create a new repository
+
+https://github.com/pavanoltraining/opencart.git
+
+git remote add origin https://github.com/pavanoltraining/opencart.git   ---> only onetime
+git push -u origin master
+
+
+2nd round
+---------
+add
+commit
+push
+pull
+status
+
+cloning remote project
+-------------
+1) create new folder on windows directory
+
+2) Create emty local repository 
+	git init 
+
+3) Clone remote project(From GotHub)
+	git clone https://github.com/pavanoltraining/opencart.git
+
+4) import project in to eclise
+
+git tutorials(PlayList): https://youtube.com/playlist?list=PLUDwpEzHYYLuMNNTu0EdWBeBtXdRhj4Lv
+
+
+------------------------------------------------------------------------------
+
+Maven Issues:
+--------------------------------------
+problem 1: Source option 6 is no longer supported. Use 7 or later.
+
+Solution:
+
+		<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+           <configuration>
+	            <source>1.8</source>
+	            <target>1.8</target>
+       		</configuration>
+          <version>3.8.1</version>
+         </plugin>
+
+problem 2: Error: [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a 
+JDK?
+
+Solution: 
+	Eclipse Window → Preferences →Java → Installed JRE’s → and check your installed JREs. 
+You should have an entry with a JDK there.

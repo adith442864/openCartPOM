@@ -21,7 +21,7 @@ public class LoginDataDrivenTest extends BaseTest {
 		
 		try
 		{
-			//driver.get(rb.getString("appURL"));
+			driver.get(rb.getString("appURL"));
 			logger.info("Home Page Displayed ");
 			//driver.manage().window().maximize();
 			
@@ -93,7 +93,7 @@ public class LoginDataDrivenTest extends BaseTest {
 	@DataProvider(name="LoginData")
 	public String [][] getData() throws IOException
 	{
-		String path="/Users/adithbala/eclipse-workspace/opencart/testData/testdata.xlsx";
+		String path="E:\\Workspace\\openCartPOM\\testData\\testdata.xlsx";
 		
 		XLSUtil xlutil=new XLSUtil(path);
 		

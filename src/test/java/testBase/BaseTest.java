@@ -35,7 +35,7 @@ public class BaseTest {
 	public Logger logger; //for logging
 	public ResourceBundle rb;
 	
-	@BeforeClass(groups= {"master", "sanity" , "regression"})
+	@BeforeClass(groups= {"sanity","regression","master"})
 	@Parameters({"browser"})
 	public void setUp(String browserName) {
 		
@@ -66,12 +66,13 @@ public class BaseTest {
 		
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().window().maximize();
 		//read value from the properties file dynamically:
-		driver.get(rb.getString("appURL"));
-		logger.info("Launch HomePage");
-		hp = new HomePage(driver);
-		regPage = new AccountRegistrationPage(driver);
-		map = new MyAccountPage(driver);
+		//driver.get(rb.getString("appURL"));
+		//logger.info("Launch HomePage");
+		//hp = new HomePage(driver);
+		//regPage = new AccountRegistrationPage(driver);
+		//map = new MyAccountPage(driver);
 		
 	}
 	

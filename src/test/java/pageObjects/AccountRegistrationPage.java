@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccountRegistrationPage {
 	
-WebDriver driver;
+	public WebDriver driver;
 	
 	public AccountRegistrationPage(WebDriver driver) {
 		this.driver=driver;

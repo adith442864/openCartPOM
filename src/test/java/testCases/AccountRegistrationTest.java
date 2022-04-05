@@ -3,25 +3,28 @@ package testCases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObjects.AccountRegistrationPage;
 import pageObjects.HomePage;
 import testBase.BaseTest;
 
 public class AccountRegistrationTest extends BaseTest {
 	
-	@Test(groups= {"regression", "master"})
+	@Test(groups= {"regression","master"})
 	public void Verify_Registration_Test() throws Exception {
 	
 	try {
 		
 		logger.info("Starting Registration Test....");
-		 
+		driver.get(rb.getString("appURL"));
+		
 		 hp = new HomePage(driver);
+		 
 		 hp.clickMyAccount();
 		 logger.info("Clicked on My Account Link...");
 		 hp.clickRegister();
 		 logger.info("Clicked on Registration Link...");
 		 
-//		 regPage = new AccountRegistrationPage(driver);
+		 regPage = new AccountRegistrationPage(driver);
 		 
 		 regPage.setFirstName("John");
 		 logger.info("Provided FirstName...");
@@ -48,17 +51,8 @@ public class AccountRegistrationTest extends BaseTest {
 		 logger.info("Clicked on Continue...");
 		 
 		 String confmsg = regPage.stringGetConfirmationMsg();
+		 Assert.assertEquals(confmsg, "Your Account Has Been Created!");
 		 
-		 
-		 if(confmsg.equals("Your Account Has Been Created!")) {
-			logger.info("Account Registration Success...");
-			Assert.assertTrue(true);
-		 }
-		 else
-			 logger.info("Account Registration Failed...");
-		 	captureScreen(driver, "Verify_Registration_Test");
-			 //System.out.println("Test Failed...");
-		 	Assert.assertTrue(false);
 		}
 		catch (Exception e) {
 			logger.error("Account Registration Failed...");
@@ -70,9 +64,4 @@ public class AccountRegistrationTest extends BaseTest {
 		
 	}
 		
-	
-	
-	
-	
-	
 }
