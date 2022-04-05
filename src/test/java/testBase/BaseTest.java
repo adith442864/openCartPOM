@@ -35,7 +35,7 @@ public class BaseTest {
 	public Logger logger; //for logging
 	public ResourceBundle rb;
 	
-	@BeforeClass
+	@BeforeClass(groups= {"master", "sanity" , "regression"})
 	@Parameters({"browser"})
 	public void setUp(String browserName) {
 		

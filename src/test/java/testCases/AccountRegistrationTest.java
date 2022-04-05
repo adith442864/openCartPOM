@@ -8,7 +8,7 @@ import testBase.BaseTest;
 
 public class AccountRegistrationTest extends BaseTest {
 	
-	@Test
+	@Test(groups= {"regression", "master"})
 	public void Verify_Registration_Test() throws Exception {
 	
 	try {

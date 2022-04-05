@@ -9,7 +9,7 @@ import testBase.BaseTest;
 
 public class LoginTest extends BaseTest {
 	
-	@Test
+	@Test(groups= {"sanity", "master"})
 	public void login_test() {
 		
 		logger.info("Starting Login Test....");

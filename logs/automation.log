@@ -1,6 +1,4 @@
-23:04:09.831 [main] INFO  testCases.LoginDataDrivenTest - Clicked on Login 
-23:04:09.910 [main] INFO  testCases.LoginDataDrivenTest - Provided Email 
-23:04:09.970 [main] INFO  testCases.LoginDataDrivenTest - Provided Password 
-23:04:14.584 [main] INFO  testCases.LoginDataDrivenTest - Clicked on Login
-23:04:29.648 [main] ERROR testCases.LoginDataDrivenTest - Login Failed 
-23:04:29.648 [main] INFO  testCases.LoginDataDrivenTest -  Finished Data Driven Testing.... 
+11:04:06.462 [main] INFO  testCases.LoginTest - Provided Password
+11:04:11.777 [main] INFO  testCases.LoginTest - Login Page launched
+11:04:11.821 [main] INFO  testCases.LoginTest - Login Success
+11:04:11.822 [main] INFO  testCases.LoginTest - Ending Login Test...

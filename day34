@@ -1,0 +1,45 @@
+1) Desing & Implementation
+2) Execution
+3) Maintanance - version control system
+
+pom.xml
+----------
+1) dependencies ----> download libraries and attach them to current project
+2) plugins ----> defining the goals
+
+
+Maven Goals
+	compile
+	run
+	test
+	package
+	install
+
+
+How to install maven on windows
+----------------------------
+
+Pre-requisite: Java/JDK
+
+1) Download pache Maven
+	https://maven.apache.org/download.cgi
+2) extract zip file, copy the folder in C: Drive.
+3) Set Maven path
+
+C:\apache-maven-3.8.1\bin
+C:\apache-maven-3.8.1
+
+4) open command prompt then execute below command
+	mvn -version
+
+
+Run the maven project through command prompt
+---------
+cd C:\Users\admin\myworkspace2\opencart
+mvn clean test
+
+
+Run the maven project using bat file
+-----------
+Playlist
+References: https://youtube.com/playlist?list=PLUDwpEzHYYLs86hEjzJGWmrHjONOQJWJY
