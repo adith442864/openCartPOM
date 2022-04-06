@@ -1,0 +1,48 @@
+Jenkins
+-------------
+1) .war file
+2) Installer (.exe)
+
+Jenkins war file download: https://get.jenkins.io/war-stable/2.289.1/jenkins.war
+
+java -jar jenkins.war
+
+
+https://github.com/pavanoltraining/opencart.git
+
+
+Jenkins - Continuos Integration tool
+----------------------
+Pre-requisites:
+----
+1) Download install jenkins
+	1st method( permanant/stand alone installation)-(Through Installer)
+		Download Jenkins:  https://www.jenkins.io/download/
+		you will get jenkins.msi file
+		After installation URL: http://localhost:8080/
+
+	2nd method(whenever you want o work with jenkins you can launch it direclty)
+		Download .war file and keep it in C:\jenkins  folder
+
+		After running the war file in command prompt then open URL: http://localhost:8080/
+
+2) Create environment varialbes(applicable for both the methods)
+	Right click on MyPC--> Properties-->Adv System settings-->Env variables--<New button under system varaible
+	JAVA_HOME
+	M2_HOME
+	MAVEN_HOME
+
+	Select path varialbe --> Edit--New
+		%JAVA_HOME%bin
+		%MAVEN_HOME%bin
+		%M2_HOME%bin
+	add git path  : C:\Program Files\Git\bin\
+
+3) Launch Jenkins using .war file
+	open the command prompt
+	Navigate to location	
+
+	java -jar jenkins.war
+
+
+4) Do first time configurations in jenkins tool( follow the document)
