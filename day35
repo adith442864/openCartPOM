@@ -32,8 +32,8 @@ Git Work flow
 ------------------------
 1) git init  --> Create an Empty git repository(Local repository)
 
-2) git config --global  user.name  "your name"
-   git config --global user.email  "your email"
+2) git config --global  user.name  "your github name"
+   git config --global user.email  "your github email"
 
 3) git status 		---> to know the status of the files
 
