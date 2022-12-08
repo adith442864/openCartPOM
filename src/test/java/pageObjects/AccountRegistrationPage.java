@@ -5,13 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AccountRegistrationPage {
+public class AccountRegistrationPage extends BasePage {
 	
 	public WebDriver driver;
 	
 	public AccountRegistrationPage(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	
 	@FindBy(name="firstname")
@@ -41,7 +40,7 @@ public class AccountRegistrationPage {
 	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
 	WebElement msgConfirmation;
 	
-	
+	//Action Methods:
 	public void setFirstName(String fname) {
 		txtFirstName.sendKeys(fname);
 	}
