@@ -12,15 +12,21 @@ public class TC_001_AccountRegistrationTest extends BaseClass {
 	
 	@Test
 	public void test_account_Registration() {
+//		logger.debug("application logs");
+		logger.info("***Starting TC_001_AccountRegistrationTest***");
 		
-		try {
+	try {
 		
 		HomePage hp = new HomePage(driver);
 		hp.clickMyAccount();
+		logger.info("Clicked on MyAccount Link");
 		hp.clickRegister();
+		logger.info("Clicked on Register Link");
 		
 		AccountRegistrationPage regPage = new AccountRegistrationPage(driver);
+		logger.info("Providing Customer data");
 		regPage.setFirstName("abc");
+		
 		
 		regPage.setLastName("xyz");
 		
@@ -35,18 +41,22 @@ public class TC_001_AccountRegistrationTest extends BaseClass {
 		regPage.setPrivacyPolicy();
 		
 		regPage.clickContinue();
+		logger.info("Clicked on Continue Button");
 		
 		String confMsg = regPage.stringGetConfirmationMsg();
+		logger.info("Validating expected message");
 		Assert.assertEquals(confMsg, "Your Account Has Been Created!");
 		
+		
 		}
-		catch(Exception e) {
+	catch(Exception e) {
 			e.getStackTrace();
+			logger.error("Test Failed...");
 			Assert.fail();
 		}
 		
 		
-		
+	logger.info("***Finished TC_001_AccountRegistrationTest***");
 		
 		
 		

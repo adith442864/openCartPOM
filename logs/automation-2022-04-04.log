@@ -1,7 +1,0 @@
-23:03:48.830 [main] INFO  testCases.LoginDataDrivenTest - Provided Password 
-23:03:53.394 [main] INFO  testCases.LoginDataDrivenTest - Clicked on Login
-23:04:08.421 [main] ERROR testCases.LoginDataDrivenTest - Login Failed 
-23:04:08.421 [main] INFO  testCases.LoginDataDrivenTest -  Finished Data Driven Testing.... 
-23:04:08.423 [main] INFO  testCases.LoginDataDrivenTest -  Starting Data Driven Login Test 
-23:04:08.423 [main] INFO  testCases.LoginDataDrivenTest - Home Page Displayed 
-23:04:08.485 [main] INFO  testCases.LoginDataDrivenTest - Clicked on My Account 
