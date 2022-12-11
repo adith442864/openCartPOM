@@ -8,17 +8,9 @@
 		
  <test name="Opencart Tests" thread-count="3">
 	 <parameter name = "browser" value="chrome" />
-	<groups>
-		<run>
-  			<include name="Master" />
-  			<!--exclude name="sanity" /> -->
-  		</run>
-	</groups>
 
 	<classes>
-      <class name="testCases.TC_001_AccountRegistrationTest"/>
-	  <class name="testCases.TC_002_LoginTest"/>
-  	  <!--class name="testCases.LoginDDT"/> -->
+  	  <class name="testCases.TC_003_LoginDDT"/>
    	</classes>
 
 </test>

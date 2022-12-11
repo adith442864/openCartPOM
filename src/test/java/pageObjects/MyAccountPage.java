@@ -5,21 +5,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MyAccountPage {
-	
-WebDriver driver;
+public class MyAccountPage extends BasePage {
 	
 	public MyAccountPage(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	
 	//Page Locators:
-	@FindBy(linkText ="Logout")
+	@FindBy(xpath="//a[@class='list-group-item' and text()='Logout']")
 	WebElement lnkLogout;
+	
+	@FindBy(xpath="//h2[text()='My Account']")
+	WebElement msgHeading;
+	
+	public boolean ismyAccountPageExists() {
+		try {
+			return (msgHeading.isDisplayed());
+		}
+			catch(Exception e) {
+				return (false);
+			}
+		}
 	
 	public void clickLogout() {
 		lnkLogout.click();
 	}
-
+	
+	
 }
+	

@@ -1,6 +1,8 @@
 package testCases;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +12,7 @@ import testBase.BaseClass;
 
 public class TC_001_AccountRegistrationTest extends BaseClass {
 	
-	@Test
+	@Test(groups= {"Regression", "Master"})
 	public void test_account_Registration() {
 //		logger.debug("application logs");
 		logger.info("***Starting TC_001_AccountRegistrationTest***");
@@ -45,14 +47,14 @@ public class TC_001_AccountRegistrationTest extends BaseClass {
 		
 		String confMsg = regPage.stringGetConfirmationMsg();
 		logger.info("Validating expected message");
-		Assert.assertEquals(confMsg, "Your Account Has Been Created!");
+		AssertJUnit.assertEquals(confMsg, "Your Account Has Been Created!");
 		
 		
 		}
 	catch(Exception e) {
 			e.getStackTrace();
 			logger.error("Test Failed...");
-			Assert.fail();
+			AssertJUnit.fail();
 		}
 		
 		

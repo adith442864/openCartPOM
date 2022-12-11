@@ -20,7 +20,7 @@
           <version>3.0.0-M6</version>
           <configuration>
           	<suiteXmlFiles>
-          		<suiteXmlFile>mastersuite.xml</suiteXmlFile>
+          		<suiteXmlFile>testng.xml</suiteXmlFile>
           	</suiteXmlFiles>
           </configuration>
         </plugin>
