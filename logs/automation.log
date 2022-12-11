@@ -287,3 +287,22 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 17:06:36.070 [main] INFO  testCases.TC_002_LoginTest - Clicked on My Account
 17:06:36.308 [main] INFO  testCases.TC_002_LoginTest - Clicked on Login Button
 17:06:40.077 [main] INFO  testCases.TC_002_LoginTest - *** Finished TC_002_LoginTest ***
+23:35:50.381 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Starting TC_003_LoginDataDrivenTest 
+23:35:57.825 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDataDrivenTest
+23:35:57.840 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Starting TC_003_LoginDataDrivenTest 
+23:36:13.347 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDataDrivenTest
+23:36:13.348 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Starting TC_003_LoginDataDrivenTest 
+23:36:27.088 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDataDrivenTest
+23:36:27.090 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Starting TC_003_LoginDataDrivenTest 
+23:36:40.869 [TestNG-tests-1] INFO  testCases.TC_003_LoginDDT -  Finished TC_003_LoginDataDrivenTest
+23:38:49.476 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - ***Starting TC_001_AccountRegistrationTest***
+23:38:49.579 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Clicked on MyAccount Link
+23:38:49.951 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Clicked on Register Link
+23:38:49.956 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Providing Customer data
+23:38:51.009 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Clicked on Continue Button
+23:38:51.054 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - Validating expected message
+23:38:51.056 [TestNG-tests-1] INFO  testCases.TC_001_AccountRegistrationTest - ***Finished TC_001_AccountRegistrationTest***
+23:38:53.669 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - *** Starting TC_002_LoginTest *** 
+23:38:53.764 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Clicked on My Account
+23:38:54.011 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - Clicked on Login Button
+23:38:57.853 [TestNG-tests-1] INFO  testCases.TC_002_LoginTest - *** Finished TC_002_LoginTest ***
