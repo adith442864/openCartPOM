@@ -23,73 +23,67 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class BaseClass {
-	
+
 	public WebDriver driver;
-	public Logger logger; //for logging
+	public Logger logger; // for logging
 	public ResourceBundle rb;
-	
-	@BeforeClass(groups= {"Master","Sanity","Regression"})
+
+	@BeforeClass(groups = { "Master", "Sanity", "Regression" })
 	@Parameters("browser")
 	public void setUp(String browser) {
-		
-		logger = LogManager.getLogger(this.getClass()); //instantiate logger
+
+		logger = LogManager.getLogger(this.getClass()); // instantiate logger
 		rb = ResourceBundle.getBundle("config");
-		
+
 		ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
-		
-		//String browser = "chrome";
-		if(browser.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+
+		// String browser = "chrome";
+		if (browser.equals("chrome")) {
+
 			driver = new ChromeDriver(options);
-		}
-		else if(browser.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		} else if (browser.equals("firefox")) {
+
 			driver = new FirefoxDriver();
-		}
-		else if(browser.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+		} else if (browser.equals("edge")) {
+
 			driver = new EdgeDriver();
-		}
-		else if(browser.equals("safari")) {
+		} else if (browser.equals("safari")) {
 			driver = new SafariDriver();
-		}else {
-			System.out.println("Please pass the right browser :" +browser);
+		} else {
+			System.out.println("Please pass the right browser :" + browser);
 		}
-		
+
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		//driver.get("https://naveenautomationlabs.com/opencart/index.php");
+		// driver.get("https://naveenautomationlabs.com/opencart/index.php");
 		driver.get(rb.getString("appURL"));
-		
+
 		driver.manage().window().maximize();
-		
-		
+
 	}
-	
+
 	public String randomString() {
 		String generatedString = RandomStringUtils.randomAlphabetic(5);
 		return (generatedString);
 	}
-	
+
 	public String randomNumber() {
 		String generatedString2 = RandomStringUtils.randomNumeric(10);
 		return (generatedString2);
 	}
-	
+
 	public String randomAlphaNumeric() {
 		String str = RandomStringUtils.randomAlphabetic(4);
 		String num = RandomStringUtils.randomNumeric(3);
-		return (str+"@"+num);
+		return (str + "@" + num);
 	}
-	
+
 	public String captureScreen(String tname) throws IOException {
 
 		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-				
+
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		String destination = System.getProperty("user.dir") + "\\screenshots\\" + tname + "_" + timeStamp + ".png";
@@ -102,10 +96,10 @@ public class BaseClass {
 		return destination;
 
 	}
-	
-	@AfterClass(groups= {"Master","Sanity","Regression"})
+
+	@AfterClass(groups = { "Master", "Sanity", "Regression" })
 	public void tearDown() {
-		if(driver!=null) {
+		if (driver != null) {
 			driver.quit();
 		}
 	}

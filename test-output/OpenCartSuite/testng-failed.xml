@@ -7,13 +7,20 @@
   <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC_003_LoginDDT">
+      <class name="testCases.TC_002_LoginTest">
         <methods>
           <include name="tearDown"/>
+          <include name="test_login"/>
           <include name="setUp"/>
-          <include name="test_LoginDDT" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- testCases.TC_003_LoginDDT -->
+      </class> <!-- testCases.TC_002_LoginTest -->
+      <class name="testCases.TC_001_AccountRegistrationTest">
+        <methods>
+          <include name="test_account_Registration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC_001_AccountRegistrationTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [OpenCartSuite] -->
